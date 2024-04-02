@@ -13,13 +13,13 @@ computer = c = 0
 command = cmd = 0
 print("Score: Computer" + str(c) + "Player" + str(cmd))
 
-# colors
-blue = (52, 70, 235)
-yellow = (237, 230, 24)
-
 # the game loop
 run = True
 while run:
+    for events in pygame.event.get():
+        if events.type == pygame.quit():
+            run = False
+    pygame.display.update()
     computer_choice = random.choice(game_list)
     command = input("Rock, Paper, Scissors or Quit: ")
     if command == computer_choice:
@@ -54,3 +54,4 @@ while run:
     print("--------------")
     print("Score: Computer: " + str(c) + "Player: " + str(cmd))
     print("--------------")
+pygame.quit()

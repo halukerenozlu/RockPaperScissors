@@ -1,10 +1,15 @@
 import random
+import datetime
 
 # starting values
 game_list = ['Rock', 'Paper', 'Scissors']
 computer = c = 0
 command = cmd = 0
-print("Score: Computer" + str(c) + "Player" + str(cmd))
+
+# initial state
+time = datetime.date.today()
+print(time)
+print("Score: Computer: " + str(c) + " Player: " + str(cmd))
 
 # the game loop
 run = True
@@ -41,5 +46,5 @@ while run:
     print("Player: " + command)
     print("Computer: " + computer_choice)
     print("--------------")
-    print("Score: Computer: " + str(c) + "Player: " + str(cmd))
+    print("Score: Computer: " + str(c) + " Player: " + str(cmd))
     print("--------------")

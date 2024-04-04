@@ -1,11 +1,4 @@
 import random
-import pygame
-
-# pygame setup
-pygame.init()
-screen = pygame.display.set_mode((1280, 720))
-pygame.display.set_caption("Rock Paper Scissors")
-clock = pygame.time.Clock()
 
 # starting values
 game_list = ['Rock', 'Paper', 'Scissors']
@@ -16,10 +9,6 @@ print("Score: Computer" + str(c) + "Player" + str(cmd))
 # the game loop
 run = True
 while run:
-    for events in pygame.event.get():
-        if events.type == pygame.quit():
-            run = False
-    pygame.display.update()
     computer_choice = random.choice(game_list)
     command = input("Rock, Paper, Scissors or Quit: ")
     if command == computer_choice:
@@ -54,4 +43,3 @@ while run:
     print("--------------")
     print("Score: Computer: " + str(c) + "Player: " + str(cmd))
     print("--------------")
-pygame.quit()

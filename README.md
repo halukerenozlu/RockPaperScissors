@@ -5,5 +5,5 @@
 - intelligibility
 
 ## Features
-- include pygame, random libs
+- include random lib
 - making the game visual and interactive

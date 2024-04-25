@@ -16,10 +16,10 @@ Run = True
 while Run:
     # Check if either player has reached the winning score before starting a new round
     if c == 3:
-        print("Computer Won, Game Over!!")
+        print("Computer Won")
         break
     elif cmd == 3:
-        print("Player Won, Game Over!!")
+        print("Player Won")
         break
 
     computer_choice = random.choice(game_list)
@@ -35,7 +35,7 @@ while Run:
 
         # Determine the winner of the round
         if command == computer_choice:
-            print("It's a tie!")
+            print("Let's go")
         elif (command == 'Rock' and computer_choice == 'Scissors') or \
                 (command == 'Paper' and computer_choice == 'Rock') or \
                 (command == 'Scissors' and computer_choice == 'Paper'):
